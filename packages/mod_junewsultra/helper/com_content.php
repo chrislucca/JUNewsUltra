@@ -650,6 +650,9 @@ class com_content extends Helper
 
 					if(is_object($images))
 					{
+						$images->image_intro=substr($images->image_intro, 0, strpos($images->image_intro, '#'));
+						$images->image_fulltext=substr($images->image_fulltext, 0, strpos($images->image_fulltext, '#'));
+						
 						$_image_intro    = file_exists($images->image_intro);
 						$_image_fulltext = file_exists($images->image_fulltext);
 
